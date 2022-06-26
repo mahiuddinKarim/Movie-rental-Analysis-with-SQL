@@ -7,6 +7,11 @@ The business intelligence (BI) division of Rockbuster Stealth will assist with t
 Rockbuster’s film inventory, customers, and payments, among other things.
 
 # Tools used:
-PostgreSQL
 
-Tableau [here](https://public.tableau.com/views/PreparingforInfluenzaSeason_16526454379220/PreparingforInfluenzaSeason?:language=en-US&:display_count=n&:origin=viz_share_link)
+PostgreSQL 
+
+Microsoft Excel
+
+Tableau 
+
+Tableau link [here](https://public.tableau.com/views/PreparingforInfluenzaSeason_16526454379220/PreparingforInfluenzaSeason?:language=en-US&:display_count=n&:origin=viz_share_link)
