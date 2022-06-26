@@ -9,3 +9,4 @@ Rockbuster’s film inventory, customers, and payments, among other things.
 # Tools used:
 PostgreSQL
 
+Tableau [here](https://public.tableau.com/views/PreparingforInfluenzaSeason_16526454379220/PreparingforInfluenzaSeason?:language=en-US&:display_count=n&:origin=viz_share_link)
