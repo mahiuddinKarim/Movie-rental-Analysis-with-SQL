@@ -1,1 +1,27 @@
+/ Performing Subqueries for top 5 country */
+SELECT DISTINCT(C.country),
+      COUNT(DISTINCT D.customer_id) AS all_customer_count,
+	  COUNT(DISTINCT C.country) AS top_customer_count
+FROM country C
+                         INNER JOIN city B ON C.country_id = B.country_id
+                                     INNER JOIN address E ON B.city_id = E.city_id
+                                          INNER JOIN customer D ON E.address_id = D.address_id
+LEFT JOIN
+                (SELECT D.customer_id,C.country,D.first_name,D.last_name,
+                        SUM(E.amount) AS total_amount_paid
+FROM customer D
 
+     
+                    INNER JOIN address A ON D.address_id = A.address_id
+                   INNER JOIN city B ON A.city_id = B.city_id
+         INNER JOIN country C ON B.country_id = C.country_id
+ INNER JOIN payment E ON D.customer_id = E.customer_id
+  WHERE city IN ('Aurora','Vila Velha','El Fuerte','Kilis','Bag','Omiya','Bellevue','Imus','Cabuyao','So Bernardo do Campo')
+                             
+GROUP BY B.city,C.country,D.customer_id
+        ORDER BY total_amount_paid DESC
+LIMIT 5) AS top_5_customers
+                    ON C.country = top_5_customers.country 
+					GROUP BY C.country, top_5_customers
+					ORDER BY all_customer_count DESC
+					LIMIT 5;
