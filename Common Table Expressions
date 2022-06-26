@@ -1,4 +1,4 @@
-/ *Here showing Common Table Expressions * /
+/ *Here showing Common Table Expressions to find top_5_customers * /
 
 with top_5_customers_CTE (customer_id,country,first_name,last_name,total_amount_paid) AS
 (
